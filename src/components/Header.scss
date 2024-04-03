@@ -1,0 +1,48 @@
+@import "styles.scss";
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .header {
+        width: 100%;
+        max-width: 1210px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .ulList {
+            width: 100%;
+            max-width: 710px;
+    
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                max-width: 320px;
+                list-style: none;
+        
+                li {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: $grey;
+                    padding-bottom: 10px;
+                    padding-top: 7px;
+                    cursor: pointer;
+
+                    &:hover {
+                        border-bottom: 3px solid $green;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
