@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ChefMasters--React-/static/css/main.1bbc01b7.css",
+    "main.js": "/ChefMasters--React-/static/js/main.9bd1e212.js",
+    "static/js/453.a711026c.chunk.js": "/ChefMasters--React-/static/js/453.a711026c.chunk.js",
+    "index.html": "/ChefMasters--React-/index.html",
+    "main.1bbc01b7.css.map": "/ChefMasters--React-/static/css/main.1bbc01b7.css.map",
+    "main.9bd1e212.js.map": "/ChefMasters--React-/static/js/main.9bd1e212.js.map",
+    "453.a711026c.chunk.js.map": "/ChefMasters--React-/static/js/453.a711026c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1bbc01b7.css",
+    "static/js/main.9bd1e212.js"
+  ]
+}
