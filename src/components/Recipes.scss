@@ -1,6 +1,71 @@
 @import 'styles.scss';
 
 .recipes-container {
+
+    a {
+        color: white;
+        padding-left: 33px;
+        padding-right: 33px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: $green;
+        font-weight: 400;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+        text-decoration: none;
+        margin-top: 140px !important;
+    }
     
+    h1 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .recipes {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 4fr);
+        column-gap: 25px;
+        row-gap: 20px;
+
+        .item {
+            background: #F3F7D9;
+            padding-top: 33px;
+            padding-bottom: 33px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 17px;
+            min-height: 250px;
+
+            h2 {
+                font-size: 26px;
+                margin-top: 14px;
+                max-height: 65px;
+                height: 100%;
+                overflow: hidden;
+                margin-bottom: 20px;
+            }
+
+            a {
+                font-size: 14px;
+            }
+        }
+
+        
+    }
+
+    recipes-preloader {
+        margin-top: 55px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
+
+#preloader {
+    animation: preloader 4s infinite;
+    margin: 0 auto;
+}
+
 

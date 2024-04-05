@@ -1,39 +1,49 @@
 @import "styles.scss";
 
-#preloader {
-    animation: preloader 4s infinite;
+.home {
+    margin-top: 55px;
+
+
+    h2 {
+        max-width: 300px;
+    }
+
+    &__categories {
+        margin-top: 55px;
+        display: grid;
+        grid-template-columns: repeat(5, 5fr);
+        column-gap: 25px;
+        row-gap: 5px;
+
+        .category {
+            width: 100%;
+            min-height: 175px;
+            padding: 10px;
+            display: flex;
+            align-items: end;
+            cursor: pointer;
+            text-decoration: none;
+
+            p {
+                font-size: 30px;
+                color: white;
+            }
+
+            &:hover {
+                background-size: 150% !important;
+            }
+        }
+    }
+
+    &__preloader {
+        margin-top: 55px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
 
-@keyframes preloader {
-    12% {
-        transform: rotate(-45deg);
-    }
-
-    24% {
-        transform: rotate(-90deg);
-    }
-
-    36% {
-        transform: rotate(-135deg);
-    }
-
-    48% {
-        transform: rotate(-180deg);
-    }
-
-    60% {
-        transform: rotate(-225deg);
-    }
-
-    78% {
-        transform: rotate(-270deg);
-    }
-
-    90% {
-        transform: rotate(-315deg);
-    }
-
-    100% {
-        transform: rotate(-360deg);
-    }
+#preloader {
+    animation: preloader 4s infinite;
+    margin: 0 auto;
 }

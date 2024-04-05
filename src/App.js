@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, createBrowserRouter, RouterProvider, Routes, Route } from 'react-router-dom';
@@ -7,37 +6,30 @@ import { Home } from "./components/Home";
 import { Footer } from "./components/Footer"
 import { Contact } from "./components/Contact"
 import { About } from "./components/About"
+import { Recipes } from './components/Recipes';
+import { Recipe } from './components/Recipe';
+import { Search } from './components/Search';
 
-import { API_URL } from './components/config';
 
 function App() {
-  const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(true)
+  const [search, setSearch] = useState(null)
 
-  useEffect(function getRecipes() {
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-    
-    fetch(API_URL, requestOptions)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        data.categories && setCategories(data.categories);
-        setLoading(false);
-      })
-      .catch(error => console.log('error', error));
-
-  }, [])
+  function getSearch(text) {
+    let searchText = text
+    console.log(text)
+  }
 
   return (
     <BrowserRouter>
-      <Header />
+      <Header getSearch={ getSearch }/>
       <Routes>
-        <Route path="/" element={<Home loading={loading} />}/>
+        <Route path="/" element={<Home />}/>
         <Route path="/contact" element={<Contact />}/>
         <Route path="/about" element={<About />}/>
+        <Route path="/category/:name" element={<Recipes />}/>
+        <Route path="/search/:name" element={<Search search={ search } />}/>
+        <Route path="/category/:name/:name" element={<Recipe />}/>
+        <Route path="/search/:name/:name" element={<Recipe />}/>
       </Routes>
       <Footer />
     </BrowserRouter>

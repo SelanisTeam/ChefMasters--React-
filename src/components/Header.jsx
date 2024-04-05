@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Header.scss";
+import { Link, useLocation } from 'react-router-dom';
+import $ from 'jquery'
 
-function Header() {
+function Header(props) {
+
     return (
         <header>
             <div className="header">
-                <img src="main-logo.svg" />
+                <img src={`/../main-logo.svg`} />
 
                 <div className='ulList'>
                     <ul>
-                        <li>Home</li>
-                        <li>Contact</li>
-                        <li>About</li>
+                        <Link className="li" to={'./'}>Home</Link>
+                        <Link className="li" to={'./about'}>About</Link>
+                        <Link className="li" to={'./contact'}>Contact</Link>
+
                     </ul>
                 </div>
+
+                <form>
+                    <input type="text" name="search" placeholder="Find Recipe" id="search" />
+                    <Link onClick={() => props.getSearch($('#search').val())} className="search-button" to={`./search/${$('#search').val()}`}>Search</Link>
+                </form>
             </div>
         </header>
     )

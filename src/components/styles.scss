@@ -9,6 +9,10 @@ $black: #333333;
     padding: 0;
     font-family: 'Rubik', sans-serif;
 
+    a {
+        text-decoration: none;
+    }
+
     button {
         color: white;
         padding-left: 33px;
@@ -17,6 +21,9 @@ $black: #333333;
         padding-bottom: 15px;
         background-color: $green;
         font-weight: 400;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
     }
 
     span {
@@ -31,7 +38,7 @@ $black: #333333;
 
     h2 {
         font-size: 26px;
-        font-weight: 400;
+        font-weight: 600;
         color: $black;
     }
 
@@ -48,7 +55,43 @@ $black: #333333;
     }
 
     section {
-        min-height: calc(100vh - 202px);
+        min-height: calc(100vh - 257px);
         width: 100%;
+        max-width: 1210px;
+        margin: 0 auto;
+    }
+}
+
+@keyframes preloader {
+    12% {
+        transform: rotate(-45deg);
+    }
+
+    24% {
+        transform: rotate(-90deg);
+    }
+
+    36% {
+        transform: rotate(-135deg);
+    }
+
+    48% {
+        transform: rotate(-180deg);
+    }
+
+    60% {
+        transform: rotate(-225deg);
+    }
+
+    78% {
+        transform: rotate(-270deg);
+    }
+
+    90% {
+        transform: rotate(-315deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
     }
 }

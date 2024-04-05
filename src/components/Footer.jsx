@@ -7,7 +7,7 @@ function Footer() {
             <div className="footer">
                 <h2 style={{fontSize: '18px'}}>Разработчики</h2>
 
-                <a href="https://github.com/SelanisTeam/ChefMasters--React-">Репозиторий</a>
+                <a href="https://github.com/SelanisTeam/ChefMasters--React-"><span>Репозиторий</span></a>
 
                 <div>
                     <h3>Волкова Диана ТКБО-01-22</h3>

@@ -7,6 +7,7 @@ header {
     align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 30px;
 
     .header {
         width: 100%;
@@ -15,9 +16,37 @@ header {
         align-items: center;
         justify-content: space-between;
 
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 270px;
+            min-height: 50px;
+
+            input {
+                width: 100%;
+                max-width: 200px;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                border-bottom: 2px solid $green;
+                font-size: 18px;
+            }
+
+            .search-button {
+                display: flex;
+                align-items: center;
+                background: none;
+                color: $green;
+                padding: 0;
+                font-size: 18px;
+            }
+        }
+
         .ulList {
             width: 100%;
-            max-width: 710px;
+            max-width: 325px;
     
             ul {
                 display: flex;
@@ -25,10 +54,10 @@ header {
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
-                max-width: 320px;
+                max-width: 320px !important;
                 list-style: none;
         
-                li {
+                .li {
                     font-size: 18px;
                     font-weight: 400;
                     color: $grey;
