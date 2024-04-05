@@ -1,7 +1,7 @@
 {
   "name": "recipes-app",
   "version": "0.1.0",
-  "homepage": "https://selanisteam.github.io/",
+  "homepage": "https://selanisteam.github.io/ChefMasters--React-/",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
