@@ -5,22 +5,22 @@ import { API_URL } from "./config"
 
 function Search(props) {
     let location = useLocation()
-    const categoryType = location.pathname.slice(1, 9)
-    const categoryName = location.pathname.slice(8)
 
     const [loading, setLoading] = useState(true)
     const [meals, setMeals] = useState([])
-    const [search, setSearch] = useState(props.search)
 
     useEffect(function getMeals() {
         const requestOptions = {
             method: 'GET',
             redirect: 'follow'
         };
+
+        console.log(`${API_URL}search.php?s=${ props.search }`)
         
-        fetch(`${API_URL}search.php?s=${ search }`, requestOptions)
+        fetch(`${API_URL}search.php?s=${ props.search }`, requestOptions)
         .then(response => response.json())
         .then(result => {
+            console.log(result)
             result.meals && setMeals(result.meals);
             setLoading(false)
         })
@@ -34,7 +34,7 @@ function Search(props) {
                     &#8592; Back to Categories
                 </Link>
 
-                <h1>{ categoryName }</h1>
+                <h1>{ props.search }</h1>
 
                 {loading ? <div className="recipes-preloader">
                     <img className="preloader" id="preloader" src="../../preloader.svg" />

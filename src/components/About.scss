@@ -1,0 +1,20 @@
+@import "styles.scss";
+
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    img {
+        border-radius: 17px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-weight: 300;
+    }
+}

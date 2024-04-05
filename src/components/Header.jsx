@@ -13,15 +13,15 @@ function Header(props) {
                 <div className='ulList'>
                     <ul>
                         <Link className="li" to={'./'}>Home</Link>
-                        <Link className="li" to={'./about'}>About</Link>
-                        <Link className="li" to={'./contact'}>Contact</Link>
+                        <Link className="li" to={'./about'}>About Us</Link>
+                        <Link className="li" to={'./random'}>Random Meal</Link>
 
                     </ul>
                 </div>
 
                 <form>
                     <input type="text" name="search" placeholder="Find Recipe" id="search" />
-                    <Link onClick={() => props.getSearch($('#search').val())} className="search-button" to={`./search/${$('#search').val()}`}>Search</Link>
+                    <Link onClick={() => props.getSearch( $('#search').val() )} className="search-button" to={`./search`}>Search</Link>
                 </form>
             </div>
         </header>
