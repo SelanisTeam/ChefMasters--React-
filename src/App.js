@@ -10,6 +10,7 @@ import { Recipes } from './components/Recipes';
 import { Recipe } from './components/Recipe';
 import { Search } from './components/Search';
 import { SearchRecipe } from './components/SearchRecipe';
+import { NoMatch } from './components/NoMatch';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
     <BrowserRouter basename='/ChefMasters--React-'>
       <Header getSearch={ getSearch }/>
       <Routes>
+        <Route path="*" element={<NoMatch />}/>
         <Route path="/" element={<Home />}/>
         <Route path="/random" element={<Random />}/>
         <Route path="/about" element={<About />}/>
