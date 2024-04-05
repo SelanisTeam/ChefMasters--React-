@@ -16,7 +16,7 @@ function About() {
                     -Ну и нафига ты это сделал!?</h4>
             </div>
 
-            <img src="./cats.jpg" alt="img-with-cats" width="458px" height="458px" />
+            <img src="/cats.jpg" alt="img-with-cats" width="458px" height="458px" />
 
             
         </section>

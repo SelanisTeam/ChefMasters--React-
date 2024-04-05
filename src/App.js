@@ -21,7 +21,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/ChefMasters--React-'>
       <Header getSearch={ getSearch }/>
       <Routes>
         <Route path="/" element={<Home />}/>

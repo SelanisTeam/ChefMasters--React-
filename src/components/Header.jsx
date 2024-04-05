@@ -8,7 +8,7 @@ function Header(props) {
     return (
         <header>
             <div className="header">
-                <img src={`/../main-logo.svg`} />
+                <img src={`/main-logo.svg`} />
 
                 <div className='ulList'>
                     <ul>
