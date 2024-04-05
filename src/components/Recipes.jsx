@@ -43,7 +43,7 @@ function Recipes(props) {
     return (
         <React.Fragment>
             <section className="recipes-container">
-                <Link to={`/../../`} className='button-back'>
+                <Link to={`../`} className='button-back'>
                     &#8592; Back to Categories
                 </Link>
 
